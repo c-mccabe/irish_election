@@ -12,9 +12,10 @@ practice only first preference votes are polled and so there is little transfer
 data available.
 
 Building my model, I make the assumption that transfer patterns in the 2019 local
-elections are likely to be predictive of the 2020 general election. We then have one
-data point on which to develop our model. In such a low data regime, a Bayesian
-approach which allows for the encoding of prior belief seems like a natural choice.
+elections are likely to be predictive of the 2020 general election. Using the 2019
+local election then means there is one data point on which to develop our model. 
+In such a low data regime, a Bayesian approach which allows for the encoding of prior
+belief seems like a natural choice.
 
 ## Model
 
