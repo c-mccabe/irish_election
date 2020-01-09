@@ -1,3 +1,6 @@
+# here are a number of functions which will be used to simulate a Single Transferable Vote (STV)
+# election in the main script.
+
 eliminate_party = function(alpha, party){
   # this function eliminates a party from the transfer matrix and renormalises
   # the rows
