@@ -19,6 +19,8 @@ Irish election.
 [Model](#model)  
 [Simulating Elections](#simulate)   
 [Model](#model)  
+[Simulating Elections](#simulate)   
+[Model](#model)  
 [Simulating Elections](#simulate)
 
 
