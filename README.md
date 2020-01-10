@@ -17,11 +17,11 @@ Irish election.
 
 ##### Table of Contents  
 [Model](#model)  
+[MCMC](#mcmc)   
 [Simulating Elections](#simulate)   
-[Model](#model)  
-[Simulating Elections](#simulate)   
-[Model](#model)  
-[Simulating Elections](#simulate)
+[Web Scraping](#web)  
+[Test Case](#test)   
+[Next Steps 11/1/2020](#next)
 
 
 <a name="model"/>
