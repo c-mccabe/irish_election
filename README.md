@@ -17,12 +17,13 @@ local election then means there is one data point on which to develop our model.
 In such a low data regime, a Bayesian approach which allows for the encoding of prior
 belief seems like a natural choice.
 
-##### Table of Contents  
+#####Table of Contents  
 [Model](#headers)  
 [Simulating Elections](#emphasis)  
 
 <a name="headers"/>
-## Model
+
+##Model
 
 I decide to model each row of the transfer matrix as a draw from a Dirichlet
 distribution on whose parameters I place semi-informative priors. While informative
@@ -35,7 +36,8 @@ of the Dirichlet distribution. Using this posterior I can then sample values and
 these to simulate different election outcomes.
 
 <a name="emphasis"/>
-## Simulating Elections
+
+##Simulating Elections
 
 I have written a function which simulates a Single Transferable Vote election given the
 trasfer matrix of candidates running. This is currently uploaded to the repository.
