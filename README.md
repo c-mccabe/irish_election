@@ -15,7 +15,7 @@ Accurately predicting transfer patterns is the key to successfully modelling an
 Irish election.
 
 
-## Table of Contents  
+### Table of Contents  
 [Model](#model)  
 [MCMC](#mcmc)   
 [Simulating Elections](#simulate)   
@@ -26,7 +26,7 @@ Irish election.
 
 <a name="model"/>
 
-## Model
+### Model
 
 Building my model, I make the assumption that transfer patterns in the 2019 local
 elections are likely to be predictive of the 2020 general election. Using the 2019
@@ -43,7 +43,7 @@ political 'common sense' makes a Bayesian setting very appealing here.
 
 <a name="mcmc"/>
 
-## MCMC
+### MCMC
 
 The Metropolis-Hastings algorithm is used to draw samples from the posterior distribution
 of the Dirichlet parameters. This is contained in the MCMC.R file in the repository. 
@@ -51,14 +51,14 @@ These posterior samples can then be used to simulate elections results.
 
 <a name="simulate"/>
 
-## Simulating Elections
+### Simulating Elections
 
 simulate_election.R contains functions used to simulate an election in a single constituency
 given constituency level poll results and a sampled transfer matrix.
 
 <a name="web"/>
 
-## Web Scraping
+### Web Scraping
 
 Unfortunately the Irish government does not provide election transfer results but the data has been
 compiled by a website called irelandelection.com. While we cannot be 100% sure about data quality,
@@ -67,7 +67,7 @@ data from the site, the code for which is contained in the file web_scraping.R.
 
 <a name="test"/>
 
-## Test Case - Dublin Rathdown 2016
+### Test Case - Dublin Rathdown 2016
 
 I tested the model on a single constituency of the 2016 general election using data drawn from the 2014
 local elections. The model correctly predicted the first seat in 100% of simulations, the second seat in 90.75%
@@ -78,7 +78,7 @@ the code is working. test_dublin_rathdown.R contains the code.
 
 <a name="next"/>
 
-## Next Steps 11/1/2020
+### Next Steps 11/1/2020
 
 1. Scrape data for all local and general election contituencies and write a scrpit to automate the
    data cleaning process.
