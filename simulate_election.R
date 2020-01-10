@@ -11,7 +11,7 @@ eliminate_party = function(alpha, party){
 
   new_alpha = alpha/rowSums(alpha) # renormalise
   return(new_alpha)
-} 
+}#eliminate_party 
 
 redistribute_votes = function(quota, alpha, candidates){
   # function which redistributes a candidate's excess votes after they have 
@@ -117,8 +117,6 @@ eliminate_lowest = function(alpha, candidates){
   return(new_candidates)
   
 }#eliminate_lowest
-
-
 
 simulate_election = function(alpha, candidates, seats, turnout){
   
