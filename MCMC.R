@@ -77,10 +77,10 @@ perform_MCMC = function(a, n, B, k, x, alpha_0, mu, beta){
     }
     X[, t + 1] = alpha
   }
-  acceptance_prob = accepted/X[, t + 1] # calculate appectance probability
+  acceptance_prob = accepted/length(X[1, ]) # calculate appectance probability
   
   Y                 = X[, B:n] # drop burn in terms
-  posterior_samples = Y[, seq(1, length(Y[1, ]), k)] # drop thinned terms
+  posterior_samples = t(Y[, seq(1, length(Y[1, ]), k)]) # drop thinned terms
   
   return(list(posterior_samples, acceptance_prob, mcmc(t(X))))
   

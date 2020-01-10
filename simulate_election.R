@@ -1,6 +1,3 @@
-# here are a number of functions which will be used to simulate a Single Transferable Vote (STV)
-# election in the main script.
-
 eliminate_party = function(alpha, party){
   # this function eliminates a party from the transfer matrix and renormalises
   # the rows
@@ -138,26 +135,10 @@ simulate_election = function(alpha, candidates, seats, turnout){
   #
   # outputs: the seats filled by the various parties running for election
   
-  # first calculate the local number of first preferences per party
-  
-  #party_fp = (national_support * local_multiplier)/(sum(national_support * local_multiplier)) * turnout
-  
-  # now assign first preference votes to each candidate
-  
-  #first_preferences = rep(0, length(candidate_party))
-  #for (i in 1:length(candidate_party)){
-  #  first_preferences[i] = round(party_fp[candidate_party[i]]*party_proportion[i])
-  #}
-  
   # calculate the quota required to become elected
   quota = ceiling(turnout/(seats + 1))
   
-  # create a data frame to store candidate information
-  #candidates = data.frame('party' = candidate_party, 'first_preferences' = first_preferences,
-                          #'party_proportion' = party_proportion) 
   leader = which.max(candidates$first_preferences)
-  
-
   elected = c()
   i = 0
   num_candidates = length(candidates[, 1])
@@ -165,6 +146,15 @@ simulate_election = function(alpha, candidates, seats, turnout){
   
   while ( (seats_to_fill > 0) & (num_candidates > seats_to_fill) ){
     i = i + 1
+    
+    if ((num_candidates == 2) & (seats_to_fill == 1) & (candidates$first_preferences[1] == candidates$first_preferences[2])){
+      # this clause fixes a bug where two remaining candidates have the same number of votes and neither reaches
+      # the quota
+      if (runif(1) < 0.5){
+        elected = c(elected, as.integer(row.names(candidates[1, ])))
+      } else { elected = c(elected, as.integer(row.names(candidates[2, ]))) }
+    }
+    
     # while there are still seats left to be filled
     if (max(candidates$first_preferences) >= quota){
       # if a candidate has reached the quota, redistribute their votes and deem them elected
@@ -195,14 +185,11 @@ simulate_election = function(alpha, candidates, seats, turnout){
     seats_to_fill = seats - length(elected) # update the number of seats remaining
     num_candidates = length(candidates[, 1]) # update number of candidates remaining
   }
-
+  
+  elected = elected[1:seats]
   # now deem the remaining candidates elected and return the vector of elected candidates
-  
-  #elected = c(elected, as.integer(row.names(candidates)))
-  
   return(elected)
-  
-}
+}#simulate_election
 
 
 
