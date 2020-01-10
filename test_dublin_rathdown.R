@@ -143,6 +143,7 @@ simulate_election(alpha = transfer_matrix, candidates = candidates, seats = seat
 election_results = matrix(0, nrow = 10000, ncol = 3)
 
 for (j in 1:10000){
+  # generate 10000 transfer matrices and use them to simulate 10000 elections.
   for (i in 1:7){
     alpha_posterior[i, ] = list_of_outputs[[1]][sample(nrow(list_of_outputs[[1]]),size = 1,replace = TRUE),i]
     transfer_matrix[i, ] = rdirichlet(1, alpha_posterior[i, ])
