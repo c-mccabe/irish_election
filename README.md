@@ -43,7 +43,7 @@ political 'common sense' makes a Bayesian setting very appealing here.
 
 <a name="mcmc"/>
 
-# MCMC
+## MCMC
 
 The Metropolis-Hastings algorithm is used to draw samples from the posterior distribution
 of the Dirichlet parameters. This is contained in the MCMC.R file in the repository. 
