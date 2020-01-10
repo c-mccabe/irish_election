@@ -17,10 +17,6 @@ Irish election.
 ##### Table of Contents  
 [Model](#model)
 [MCMC](#mcmc)
-[Simulating Elections](#simulate)
-[Web Scraping](#web)
-[Test Case](#test)
-[Next Steps](#next)
 
 <a name="model"/>
 
