@@ -15,7 +15,7 @@ Accurately predicting transfer patterns is the key to successfully modelling an
 Irish election.
 
 
-##### Table of Contents  
+## Table of Contents  
 [Model](#model)  
 [MCMC](#mcmc)   
 [Simulating Elections](#simulate)   
