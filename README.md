@@ -17,7 +17,10 @@ Irish election.
 
 ##### Table of Contents  
 [Model](#model)  
-[Simulating Elections](#simulate)  
+[MCMC](#mcmc)
+[Simulating Elections](#simulate)
+[Simulating Elections](#simulate)
+[Simulating Elections](#simulate)
 
 <a name="model"/>
 
