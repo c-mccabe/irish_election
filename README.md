@@ -17,7 +17,7 @@ Irish election.
 
 ##### Table of Contents  
 [Model](#model)  
-[Simulating Elections](#simulate)
+[Simulating Elections](#simulate)   
 [Model](#model)  
 [Simulating Elections](#simulate)
 
