@@ -7,7 +7,7 @@ much more difficult problem.
 
 For each constituency we can consider a "transfer matrix" where the (i, j) entry
 corresponds to the proportion of candidate i's votes which are transferred to
-candidate j. While this information could in theory be collected by pollsters, in
+candidate j. While this information could in theory be collected by polling companies, in
 practice only first preference votes are polled and so there is little transfer
 data available.
 
