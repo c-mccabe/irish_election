@@ -18,8 +18,6 @@ Irish election.
 ##### Table of Contents  
 [Model](#model)  
 [Simulating Elections](#simulate)
-[Simulating Elections](#simulate)
-[Simulating Elections](#simulate)
 
 <a name="model"/>
 
